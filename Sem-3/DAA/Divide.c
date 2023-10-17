@@ -6,7 +6,7 @@ void divide(int x, int y)
 {
     int q,r;
     
-    if (x==0) 
+    if (x==0)
     {
         q=0;
         r=0;
@@ -21,14 +21,20 @@ void divide(int x, int y)
     q=2*q;
     r=2*r;
     
-    if (x%2!=0) 
+    if (x%2!=0)
     {
         r=r+1;
-        if (r>=y) 
+        if (r>=y)
         {
             r-=y;
             q+=1;
         }
+    }
+    
+    if (r==y)
+    {
+        r=0;
+        q=1;
     }
     
     printf("Quotient: %d; Remainder: %d", q,r);
