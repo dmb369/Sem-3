@@ -19,7 +19,31 @@ int main()
     scanf("%d %d",&x,&y);
     int n;
     scanf("%d",&n);
-    int k=bin_exp(x,y);
-    printf("%d",k%n);
+    int z=bin_exp(x,y);
+    
+    int r;
+        
+    if (z==0)
+    {
+        r=0;
+    }
+    
+    int l=z/2;
+    r=l%n;
+    
+    r*=2;
+    
+    if (z%2!=0)
+    {
+        r=r+1;
+        if (r>=n)
+        {
+            r-=n;
+        }
+    }
+    
+    if (r==n) r=0;
+    
+    printf("modN value is %d",r);
     return 0;
 }
