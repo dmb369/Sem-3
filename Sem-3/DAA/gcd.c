@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <math.h>
 
+//This is done using the concepts established by Euclid.
+
 int gcd(int x,int y)
 {
     if (y==0) return x;
